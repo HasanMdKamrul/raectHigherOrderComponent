@@ -1,9 +1,11 @@
-import MasterCounter from './Components/MasterCounter';
+import ClickCounter from './Components/ClickCounter';
+import ClickHover from './Components/ClickHover';
 
 function App() {
   return (
     <div>
-      <MasterCounter />
+      <ClickCounter />
+      <ClickHover />
     </div>
   )
   
