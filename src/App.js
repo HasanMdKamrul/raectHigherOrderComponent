@@ -1,9 +1,12 @@
-import Calculator from "./Components/Calculator";
+import MasterCounter from './Components/MasterCounter';
 
 function App() {
-return (
-    <Calculator />
+  return (
+    <div>
+      <MasterCounter />
+    </div>
   )
+  
 }
 
 export default App;
