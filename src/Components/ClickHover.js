@@ -1,13 +1,11 @@
-import WithCounter from './HOC/WithCounter';
+export default function ClickHover({count,increment}){
 
-const ClickHover = ({count, increament})=>{    
     return (
         <div>
-            <h1 onMouseOver={increament}>
+            <h1 onMouseOver={increment}>
                 Hovered {count} times clicked
             </h1>
         </div>
     )
-};
 
-export default WithCounter(ClickHover);
+}
