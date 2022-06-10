@@ -10,8 +10,8 @@ export default function Content(){
             <Intermediate>
                 {(count,increment) => (
                     <ThemeContext.Consumer>
-                        {({theme}) => (
-                            <ClickHover count={count} increment={increment} theme={theme}/>
+                        {({theme, switchTheme}) => (
+                            <ClickHover count={count} increment={increment} theme={theme} switchTheme={switchTheme}/>
                         )}
                     </ThemeContext.Consumer>
                 )}

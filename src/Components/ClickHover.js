@@ -1,4 +1,4 @@
-export default function ClickHover({count,increment,theme}){
+export default function ClickHover({count,increment,theme,switchTheme}){
 
     const style = theme === 'dark' ? { backgroundColor: '#000000', color: '#ffffff'} : null;
     return (
@@ -6,6 +6,9 @@ export default function ClickHover({count,increment,theme}){
             <h1 onMouseOver={increment} style={style}>
                 Hovered {count} times clicked
             </h1>
+            <button type="button" onClick={switchTheme}>
+                Click here to change theme
+            </button>
         </div>
     )
 
