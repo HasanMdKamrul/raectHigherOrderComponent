@@ -7,7 +7,7 @@ export default function ClickHover({count,increment,theme,switchTheme}){
                 Hovered {count} times clicked
             </h1>
             <button type="button" onClick={switchTheme}>
-                Click here to change theme
+               Change Theme
             </button>
         </div>
     )

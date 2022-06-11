@@ -1,21 +1,32 @@
+import React from 'react';
 import ClickHover from './ClickHover';
 import ThemeContext from './Contexts/ThemeContext';
 import Intermediate from './Intermediate';
 
-export default function Content(){
+export default class Content extends React.Component {
 
-    return (
-       <div>
-            <h1>This is Content</h1>
-            <Intermediate>
-                {(count,increment) => (
-                    <ThemeContext.Consumer>
-                        {({theme, switchTheme}) => (
-                            <ClickHover count={count} increment={increment} theme={theme} switchTheme={switchTheme}/>
-                        )}
-                    </ThemeContext.Consumer>
-                )}
-            </Intermediate>
-       </div>
-    )
+    componentDidMount() {
+        const {theme,switchTheme} = this.context;
+        console.log(theme);
+        console.log(switchTheme);
+    }
+
+    render() {
+        return (
+            <div>
+                 <h1>This is Content</h1>
+                 <Intermediate>
+                     {(count,increment) => (
+                         <ThemeContext.Consumer>
+                             {({theme, switchTheme}) => (
+                                 <ClickHover count={count} increment={increment} theme={theme} switchTheme={switchTheme}/>
+                             )}
+                         </ThemeContext.Consumer>
+                     )}
+                 </Intermediate>
+            </div>
+         )
+    }
 }
+
+Content.contextType = ThemeContext;
