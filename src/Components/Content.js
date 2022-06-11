@@ -5,6 +5,7 @@ import Intermediate from './Intermediate';
 
 export default function Content(){
     const {theme,switchTheme} = useContext(ThemeContext);
+    console.log('Content rendered');
     return (
        <div>
             <h1>This is Content</h1>
